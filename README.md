@@ -1,59 +1,101 @@
-# EaAlexVasquez
+# Tesla Supercharger & Fleet Platform
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.8.
+An Angular web application for managing charging stations and vehicle charging
+information. The application provides a responsive shell with navigation,
+localized content, and API-backed views for the charging and fleet domains.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- Home dashboard with charging station data loaded from the platform API.
+- Charging station collection and station detail cards.
+- Vehicle charge data table with sorting, pagination, and CRUD actions.
+- Reactive application state management using Angular Signals.
+- Lazy-loaded charging and vehicle routes.
+- English and Spanish localization with a language switcher.
+- Material Design components and responsive application layout.
+- Loading and error states for API operations.
+- Web Share API support for charging station information, with clipboard
+  fallback where sharing is unavailable.
 
-```bash
-ng serve
-```
+## Technology Stack
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Angular 22
+- TypeScript 6
+- Angular Material and Angular CDK
+- RxJS 7
+- `@ngx-translate/core` and `@ngx-translate/http-loader`
+- Vitest through the Angular CLI test builder
+- npm
 
-## Code scaffolding
+## Configuration
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Prerequisites
 
-```bash
-ng generate component component-name
-```
+- Node.js compatible with the installed Angular CLI version.
+- npm 11 or a compatible npm version.
+- A running platform provider API.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+### Install dependencies
 
 ```bash
-ng test
+npm install
 ```
 
-## Running end-to-end tests
+### Configure the API
 
-For end-to-end (e2e) testing, run:
+API settings are defined in:
+
+- `src/environments/environment.development.ts` for development.
+- `src/environments/environment.ts` for production builds.
+
+The development configuration expects the API at
+`http://localhost:3000/api/v1`, while the production configuration expects
+`http://localhost:8080/api/v1`. Both configurations use the following
+resource paths:
+
+- `/charging-stations`
+- `/vehicle-charges`
+
+Update the environment files when the platform provider API is hosted at a
+different URL.
+
+### Run the development server
 
 ```bash
-ng e2e
+npm start
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Open `http://localhost:4200/` in a browser. The development server reloads
+automatically when source files change.
 
-## Additional Resources
+### Build the application
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+npm run build
+```
+
+Production build artifacts are generated in `dist/eaAlexVasquez`.
+
+### Run unit tests
+
+```bash
+npm test
+```
+
+## Project Structure
+
+- `src/app/chargingStations`: charging station domain, API integration, state,
+  and presentation components.
+- `src/app/vehicleCharges`: vehicle charge domain, API integration, state, and
+  presentation components.
+- `src/app/shared`: layout, navigation, localization, and shared
+  infrastructure.
+- `public/i18n`: English and Spanish translation resources.
+- `src/environments`: environment-specific API configuration.
+
+## Authorship
+
+**Author:** Dev-AlexanderVasquez  
+**Email:** [devshiro2802@gmail.com](mailto:devshiro2802@gmail.com)  
+**Private GitHub repository:**  
+[https://github.com/Dev-AlexanderVasquez/ea7760u202222473](https://github.com/Dev-AlexanderVasquez/ea7760u202222473)
