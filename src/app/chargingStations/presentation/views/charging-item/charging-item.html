@@ -1,0 +1,13 @@
+<mat-card class="article-card">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>{{ charging().stationName }}</mat-card-title>
+      <mat-card-subtitle> {{ charging().vehicleType }} </mat-card-subtitle>
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    <p> {{ charging().maxGridKwCapacity }} kW</p>
+    <p> {{ charging().stallsAvailable }} stalls available</p>
+    <p> {{ charging().isActive }} stalls active</p>
+  </mat-card-content>
+</mat-card>
