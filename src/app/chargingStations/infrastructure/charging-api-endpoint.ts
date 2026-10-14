@@ -11,7 +11,7 @@ import {environment} from '../../../environments/environment';
  */
 export class ChargingApiEndpoint extends BaseApiEndpoint<Charging, ChargingResource, ChargingResponse, ChargingAssembler> {
   /**
-   * Creates an instance of ChargingApiEndpoint.
+   * Creates an instance of VehicleApiEndpoint.
    * @param http - The HttpClient to be used for making API requests.
    */
   constructor(http: HttpClient) {

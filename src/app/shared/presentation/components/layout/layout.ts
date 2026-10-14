@@ -5,12 +5,6 @@ import {MatButtonModule} from '@angular/material/button';
 import {TranslatePipe} from '@ngx-translate/core';
 import {LanguageSwitcher} from '../language-switcher/language-switcher';
 import {FooterContent} from '../footer-content/footer-content';
-/*
-import {
-  AuthenticationSection
-} from '../../../../iam/presentation/components/authentication-section/authentication-section';
-*/
-
 /**
  * Main shell component that hosts top-level navigation and routed content.
  */
@@ -25,7 +19,6 @@ import {
     TranslatePipe,
     LanguageSwitcher,
     FooterContent,
-    // AuthenticationSection
   ],
   templateUrl: './layout.html',
   styleUrl: './layout.css'
@@ -36,8 +29,6 @@ export class Layout {
    */
   options = signal([
     {link: '/home', label: 'option.home'},
-    {link: '/about', label: 'option.about'},
-    {link: '/learning/categories', label: 'option.categories'},
-    {link: '/learning/courses', label: 'option.courses'}
+    {link: '/vehicle/new', label: 'option.vehicle'},
   ]);
 }

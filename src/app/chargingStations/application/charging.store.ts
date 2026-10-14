@@ -42,7 +42,7 @@ export class ChargingStore {
   readonly error = this.errorSignal.asReadonly();
 
   /**
-   * Creates an instance of ChargingStore and loads initial data.
+   * Creates an instance of VehicleStore and loads initial data.
    */
   constructor() {
     this.loadCharging();

@@ -1,0 +1,54 @@
+<h1 class="title">{{ 'vehicle.list-title' | translate }}</h1>
+@if (store.loading()) {
+<mat-spinner diameter="40"></mat-spinner>
+}
+@if (store.error()) {
+<mat-error>{{ store.error() }}</mat-error>
+}
+<table mat-table [dataSource]="dataSource()" class="mat-elevation-z8"  matSort matSortActive="id" matSortDirection="asc" matSortDisableClear>
+  <!-- ID Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>{{ 'vehicle.id' | translate}}</th>
+    <td mat-cell *matCellDef="let course"> {{ course.id }} </td>
+  </ng-container>
+
+  <!-- Make ID Column -->
+  <ng-container matColumnDef="makeId">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>{{ 'vehicle.makeId' | translate}}</th>
+    <td mat-cell *matCellDef="let course"> {{ course.makeId }} </td>
+  </ng-container>
+
+  <!-- makeName Column -->
+  <ng-container matColumnDef="makeName">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'vehicle.makeName' | translate}} </th>
+    <td mat-cell *matCellDef="let course"> {{ course.makeName }} </td>
+  </ng-container>
+
+  <!-- chargingPortType Column -->
+  <ng-container matColumnDef="chargingPortType">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'vehicle.chargingPortType' | translate }} </th>
+    <td mat-cell *matCellDef="let course"> {{ vehicle.chargingPortType }} </td>
+  </ng-container>
+
+  <!-- isFastCharge Column -->
+  <ng-container matColumnDef="chargingPortType">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'vehicle.isFastCharge' | translate }} </th>
+    <td mat-cell *matCellDef="let course"> {{ vehicle.isFastCharge }} </td>
+  </ng-container>
+
+  <!-- Actions Column -->
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef> {{ 'vehicle.actions' | translate }} </th>
+    <td mat-cell *matCellDef="let course">
+      <button mat-icon-button aria-label="{{ 'vehicle.edit'    | translate }}" (click)="editCourse(course.id)"><mat-icon>edit</mat-icon></button>
+      <button mat-icon-button aria-label="{{ 'vehicle.delete'  | translate }}" (click)="deleteCourse(course.id)"><mat-icon>delete</mat-icon></button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+<button mat-raised-button color="primary" (click)="navigateToNew()">{{ 'vehicle.new' | translate }}</button>

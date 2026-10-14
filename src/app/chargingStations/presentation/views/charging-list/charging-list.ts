@@ -11,7 +11,7 @@ import {ChargingItem} from '../charging-item/charging-item';
   imports: [
     ChargingItem
   ],
-  templateUrl: './charging-list.html',
+  templateUrl: './vehicle-list.html',
   styleUrl: './charging-list.css'
 })
 export class ChargingList {

@@ -1,9 +1,7 @@
 {
   "option": {
     "home": "Home",
-    "about": "About Us",
-    "categories": "Categories",
-    "courses": "Courses"
+    "vehicle": "New Vehicle Charge"
   },
   "about": {
     "title": "About us",
@@ -12,6 +10,10 @@
   "home": {
     "title": "Home",
     "content": "Intelligent Fleet Power Distribution and Supercharger Management."
+  },
+  "vehicle": {
+    "title": "New Vehicle Charge",
+    "content": "Register Electric Vehicle Power Demand to Station."
   },
   "page-not-found": {
     "title": "Page not found",
@@ -22,26 +24,5 @@
     "rights": "All rights reserved.",
     "powered-by": "Powered by",
     "and": "and"
-  },
-  "categories": {
-    "list-title": "Categories",
-    "id": "ID",
-    "name": "Name",
-    "actions": "Actions",
-    "new": "New Category",
-    "edit": "Edit",
-    "delete": "Delete"
-  },
-  "category": {
-    "new-title": "Create New Category",
-    "edit-title": "Edit Category",
-    "name": "Name",
-    "create": "Create Category",
-    "update": "Update Category",
-    "cancel": "Cancel",
-    "error": {
-      "name-required": "Name is required"
-    }
   }
-
 }

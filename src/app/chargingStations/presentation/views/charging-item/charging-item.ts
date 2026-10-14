@@ -2,10 +2,9 @@ import {Component, computed, inject, viewChild, InputSignal, input} from '@angul
 import {Router} from '@angular/router';
 import {Charging} from '../../../domain/model/charging.entity';
 import {MatSnackBar} from '@angular/material/snack-bar';
-import {MatCard, MatCardActions, MatCardContent, MatCardHeader } from '@angular/material/card';
-import {MatCardImage, MatCardSubtitle, MatCardTitle, MatCardTitleGroup } from '@angular/material/card';
-import {DatePipe} from '@angular/common';
-import {MatButton, MatIconButton} from '@angular/material/button';
+import {MatCard, MatCardContent, MatCardHeader } from '@angular/material/card';
+import { MatCardSubtitle, MatCardTitle, MatCardTitleGroup } from '@angular/material/card';
+import {MatIconButton} from '@angular/material/button';
 import {TranslatePipe} from '@ngx-translate/core';
 import {MatIcon} from '@angular/material/icon';
 
@@ -14,8 +13,7 @@ import {MatIcon} from '@angular/material/icon';
   selector: 'app-charging-item',
   imports: [
     MatCard, MatCardHeader, MatCardTitleGroup, MatCardTitle, MatCardSubtitle,
-    DatePipe, MatCardContent, MatCardActions, MatButton, MatCardImage,
-    TranslatePipe, MatIconButton, MatIcon
+     MatCardContent
   ],
   templateUrl: './charging-item.html',
   styleUrl: './charging-item.css'

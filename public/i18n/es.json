@@ -1,17 +1,15 @@
 {
-  "option" : {
-    "home": "Inicio",
-    "about": "Acerca de",
-    "categories": "Categorías",
-    "courses": "Cursos"
-  },
-  "about": {
-    "title": "Acerca de nosotros",
-    "content": "ACME Learning Center es una plataforma educativa, parte de ACME Corporation."
+  "option": {
+    "home": "Home",
+    "vehicle": "Nuevo Vehicle Charge"
   },
   "home": {
     "title": "Home",
     "content": "Intelligent Fleet Power Distribution and Supercharger Management."
+  },
+  "vehicle": {
+    "title": "Nuevo Vehicle Charge",
+    "content": "Registrar la demanda de energía del vehículo eléctrico a la estación."
   },
   "page-not-found": {
     "title": "Página no encontrada",
@@ -22,15 +20,5 @@
     "rights": "Todos los derechos reservados.",
     "powered-by": "Desarrollado con",
     "and": "y"
-  },
-  "categories": {
-    "list-title": "Categorías",
-    "id": "ID",
-    "name": "Nombre",
-    "actions": "Acciones",
-    "new": "Nueva Categoría",
-    "edit": "Editar",
-    "delete": "Eliminar"
   }
-
 }

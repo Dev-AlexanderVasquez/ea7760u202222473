@@ -8,7 +8,7 @@ import {ChargingResponse, ChargingResource} from './charging-response';
 export class ChargingAssembler implements BaseAssembler<Charging, ChargingResource, ChargingResponse> {
 
   /**
-   * Converts a ChargingResponse to an array of Charging entities.
+   * Converts a VehicleResponse to an array of Charging entities.
    * @param response - The API response containing charging stations.
    * @returns An array of Charging entities.
    */
